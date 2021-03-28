@@ -17,7 +17,7 @@ ADDONTITLE = '[COLOR limegreen][B]Flix[/B][/COLOR]Wizard'
 BUILDERNAME = 'FlixWizard'
 EXCLUDES = [ADDON_ID, 'repository.flixwizard']
 # Text File with build info in it.
-BUILDFILE = 'http://'
+BUILDFILE = 'https://raw.githubusercontent.com/unkn0wn234/repository.flixwizard/master/wizardfiles/builds.txt'
 # How often you would like it to check for build updates in days
 # 0 being every startup of kodi
 UPDATECHECK = 0
