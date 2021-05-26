@@ -21,6 +21,12 @@
         <reuselanguageinvoker>false</reuselanguageinvoker>
         <source>https://www.github.com/unkn0wn234/plugin.program.flixwizard/</source>
         <news>
+1.4.9
+ - Fix Error Related to Log
+1.4.8
+ - Fix regex for formatting tags
+ - Fix theme selection after build install
+ - Fix downloading into invalid path
 1.4.7
  - Don't show Matrix builds in previous versions
 1.4.6
