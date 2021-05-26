@@ -145,10 +145,12 @@ class Wizard:
                 themecount = BuildMenu().theme_count(name)
 
                 if themecount > 0:
-                    self.theme(name, 'theme')
+                    self.theme(name)
 
                 db.addon_database(CONFIG.ADDON_ID, 1)
                 db.force_check_updates(over=True)
+                if os.path.exists(os.path.join(CONFIG.USERDATA, '.enableall')):
+                	CONFIG.set_setting('enable_all', 'true')
 
                 self.dialog.ok(CONFIG.ADDONTITLE, "[COLOR {0}]To save changes you now need to force close Kodi, Press OK to force close Kodi[/COLOR]".format(CONFIG.COLOR2))
                 tools.kill_kodi(over=True)
@@ -218,7 +220,7 @@ class Wizard:
             logging.log_notify(CONFIG.ADDONTITLE,
                                '[COLOR {0}]GuiFix: Cancelled![/COLOR]'.format(CONFIG.COLOR2))
 
-    def theme(self, name, theme, over=False):
+    def theme(self, name, theme='', over=False):
         installtheme = False
 
         if not theme:
